@@ -1,0 +1,303 @@
+|  File ';' for 'jshell' is not found.
+|  Welcome to JShell -- Version 9
+|  For an introduction type: /help intro
+
+jshell> 230
+$1 ==> 230
+
+jshell> 
+
+jshell> jshell> int y=9;System.out.println(y);
+|  Error:
+|  '.class' expected
+|  jshell> int y=9;
+|              ^
+
+jshell> y ==> 9
+|  Error:
+|  illegal start of expression
+|  y ==> 9
+|      ^
+
+jshell> 9
+$2 ==> 9
+
+jshell> 
+
+jshell> jshell> public void hello(){ System.out.println("i m learning java")}
+|  Error:
+|  illegal start of expression
+|  jshell> public void hello(){ System.out.println("i m learning java")}
+|          ^
+
+jshell> |  Error:
+|  Error:
+|  illegal start of expression
+|  |  Error:
+|  ^
+
+jshell> |  ';' expected
+|  Error:
+|  illegal start of expression
+|  |  ';' expected
+|  ^
+
+jshell> |  public void hello(){ System.out.println("i m learning java")}
+|  Error:
+|  illegal start of expression
+|  |  public void hello(){ System.out.println("i m learning java")}
+|  ^
+|  Error:
+|  illegal start of expression
+|  |  public void hello(){ System.out.println("i m learning java")}
+|     ^
+
+jshell> |                                                              ^
+|  Error:
+|  illegal start of expression
+|  |                                                              ^
+|  ^
+|  Error:
+|  illegal start of expression
+|  |                                                              ^
+|                                                                 ^
+|  Error:
+|  reached end of file while parsing
+|  |                                                              ^
+|                                                                  ^
+
+jshell> 
+
+jshell> jshell> public void hello(){ System.out.println("i m learning java");}
+|  Error:
+|  illegal start of expression
+|  jshell> public void hello(){ System.out.println("i m learning java");}
+|          ^
+
+jshell> |  created method hello()
+|  Error:
+|  illegal start of expression
+|  |  created method hello()
+|  ^
+
+jshell> 
+
+jshell> jshell> hello();
+|  Error:
+|  cannot find symbol
+|    symbol:   variable jshell
+|  jshell> hello();
+|  ^----^
+|  Error:
+|  cannot find symbol
+|    symbol:   method hello()
+|  jshell> hello();
+|          ^---^
+
+jshell> i m learning javajshell> System.out.println(230);
+|  Error:
+|  ';' expected
+|  i m learning javajshell> System.out.println(230);
+|     ^
+
+jshell> 230
+$3 ==> 230
+
+jshell> 
+
+jshell> jshell> int y=9;System.out.println(y);
+|  Error:
+|  '.class' expected
+|  jshell> int y=9;
+|              ^
+
+jshell> y ==> 9
+|  Error:
+|  illegal start of expression
+|  y ==> 9
+|      ^
+
+jshell> 9
+$4 ==> 9
+
+jshell> 
+
+jshell> jshell> public void hello(){ System.out.println("i m learning java")}
+|  Error:
+|  illegal start of expression
+|  jshell> public void hello(){ System.out.println("i m learning java")}
+|          ^
+
+jshell> |  Error:
+|  Error:
+|  illegal start of expression
+|  |  Error:
+|  ^
+
+jshell> |  ';' expected
+|  Error:
+|  illegal start of expression
+|  |  ';' expected
+|  ^
+
+jshell> |  public void hello(){ System.out.println("i m learning java")}
+|  Error:
+|  illegal start of expression
+|  |  public void hello(){ System.out.println("i m learning java")}
+|  ^
+|  Error:
+|  illegal start of expression
+|  |  public void hello(){ System.out.println("i m learning java")}
+|     ^
+
+jshell> |                                                              ^
+|  Error:
+|  illegal start of expression
+|  |                                                              ^
+|  ^
+|  Error:
+|  illegal start of expression
+|  |                                                              ^
+|                                                                 ^
+|  Error:
+|  reached end of file while parsing
+|  |                                                              ^
+|                                                                  ^
+
+jshell> 
+
+jshell> jshell> public void hello(){ System.out.println("i m learning java");}
+|  Error:
+|  illegal start of expression
+|  jshell> public void hello(){ System.out.println("i m learning java");}
+|          ^
+
+jshell> |  created method hello()
+|  Error:
+|  illegal start of expression
+|  |  created method hello()
+|  ^
+
+jshell> 
+
+jshell> jshell> hello();
+|  Error:
+|  cannot find symbol
+|    symbol:   variable jshell
+|  jshell> hello();
+|  ^----^
+|  Error:
+|  cannot find symbol
+|    symbol:   method hello()
+|  jshell> hello();
+|          ^---^
+
+jshell> i m learning javajshell> System.out.println(230);
+|  Error:
+|  ';' expected
+|  i m learning javajshell> System.out.println(230);
+|     ^
+
+jshell> 230
+$5 ==> 230
+
+jshell> 
+
+jshell> jshell> int y=9;System.out.println(y);
+|  Error:
+|  '.class' expected
+|  jshell> int y=9;
+|              ^
+
+jshell> y ==> 9
+|  Error:
+|  illegal start of expression
+|  y ==> 9
+|      ^
+
+jshell> 9
+$6 ==> 9
+
+jshell> 
+
+jshell> jshell> public void hello(){ System.out.println("i m learning java")}
+|  Error:
+|  illegal start of expression
+|  jshell> public void hello(){ System.out.println("i m learning java")}
+|          ^
+
+jshell> |  Error:
+|  Error:
+|  illegal start of expression
+|  |  Error:
+|  ^
+
+jshell> |  ';' expected
+|  Error:
+|  illegal start of expression
+|  |  ';' expected
+|  ^
+
+jshell> |  public void hello(){ System.out.println("i m learning java")}
+|  Error:
+|  illegal start of expression
+|  |  public void hello(){ System.out.println("i m learning java")}
+|  ^
+|  Error:
+|  illegal start of expression
+|  |  public void hello(){ System.out.println("i m learning java")}
+|     ^
+
+jshell> |                                                              ^
+|  Error:
+|  illegal start of expression
+|  |                                                              ^
+|  ^
+|  Error:
+|  illegal start of expression
+|  |                                                              ^
+|                                                                 ^
+|  Error:
+|  reached end of file while parsing
+|  |                                                              ^
+|                                                                  ^
+
+jshell> 
+
+jshell> jshell> public void hello(){ System.out.println("i m learning java");}
+|  Error:
+|  illegal start of expression
+|  jshell> public void hello(){ System.out.println("i m learning java");}
+|          ^
+
+jshell> |  created method hello()
+|  Error:
+|  illegal start of expression
+|  |  created method hello()
+|  ^
+
+jshell> 
+
+jshell> jshell> hello();
+|  Error:
+|  cannot find symbol
+|    symbol:   variable jshell
+|  jshell> hello();
+|  ^----^
+|  Error:
+|  cannot find symbol
+|    symbol:   method hello()
+|  jshell> hello();
+|          ^---^
+
+jshell> i m learning java
+|  Error:
+|  ';' expected
+|  i m learning java;
+|     ^
+
+jshell> 
+
+jshell> 
+
+jshell> 
