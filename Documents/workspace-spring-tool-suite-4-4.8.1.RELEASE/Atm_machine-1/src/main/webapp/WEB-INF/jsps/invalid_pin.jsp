@@ -15,7 +15,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #f0f0f0;
+            background-color: #000080;
             font-family: Arial, sans-serif;
         }
         
@@ -70,14 +70,16 @@
     <div class="container">
         <h2>Invalid pin please try again</h2>
        
-        <form action="verifyPin" method="post">
+        <form action="/verifyPin/withdraw/Amount" method="post">
             
             
             <label for="atmPin">  ATM Pin:</label>
             <input type="password" id="atmPin" name="atmPin" pattern="[0-9]{4}" required>
-            
+             <label for="atmPin">  Account Number:</label>
+             
+            <input type="text" id="aaccountNumber" name="accountNumber"  required>
             <input type="submit" value="Submit">
-            <h3><a href="create">Go to main menu</a></h3>
+            <h3><a href="/create">Go to main menu</a></h3>
         </form>
           
     </div>

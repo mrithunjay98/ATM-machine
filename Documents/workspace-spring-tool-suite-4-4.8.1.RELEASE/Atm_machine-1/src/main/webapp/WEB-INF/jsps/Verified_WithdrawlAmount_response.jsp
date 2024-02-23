@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #000080;
             padding: 20px;
         }
         .confirmation-box {
@@ -44,14 +44,16 @@
         <p><strong>Your available Balance:</strong> ${user.balance}</p>
          
          
-        <form action="withdraw" method="post">
+     
+          
+      
+       <h3><a href="/withdrawDetails">Withdraw </a></h3>
+       
+      
+      
+        <h3><a href="/create">Go to main menu</a></h3>
         
         
-        
-        </form>
-         
-       <%@include file="withdraw.jsp" %>
-        <h3><a href="create">Go to main menu</a></h3>
     </div>
 </body>
 </html>

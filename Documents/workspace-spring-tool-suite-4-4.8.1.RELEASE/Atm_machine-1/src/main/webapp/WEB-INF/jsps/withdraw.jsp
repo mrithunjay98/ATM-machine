@@ -15,7 +15,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #f0f0f0;
+            background-color: #000080;
             font-family: Arial, sans-serif;
         }
         
@@ -68,16 +68,17 @@
 </head>
 <body>
     <div class="container">
-        <h2>Enter withdraw amount</h2>
-        <form action="withdraw" method="post">
+        <h2>Enter Withdraw amount</h2>
+        <form action="withdraw_Amount" method="post">
             
             
             <label for="atmPin">  Amount:</label>
-            <input type="text" id="amount" name="amount" pattern="[0-9]{4}" required>
+            <input type="text" id="amount" name="amount" " required>
             <label for="atmPin">  ATM Pin:</label>
             <input type="password" id="atmPin" name="atmPin" pattern="[0-9]{4}" required>
             
             <input type="submit" value="Submit">
+            <h3><a href="create">Go to main menu</a></h3>
             
             
         </form>

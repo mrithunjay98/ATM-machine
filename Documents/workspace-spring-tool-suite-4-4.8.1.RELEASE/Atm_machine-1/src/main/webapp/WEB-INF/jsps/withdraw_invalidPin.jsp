@@ -15,7 +15,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #f0f0f0;
+            background-color: #000080;
             font-family: Arial, sans-serif;
         }
         
@@ -69,7 +69,7 @@
 <body>
     <div class="container">
         <h2>Invaalid pin Enter again</h2>
-        <form action="withdraw" method="post">
+        <form action="withdraw_Amount" method="post">
             
             
             <label for="atmPin">  Amount:</label>

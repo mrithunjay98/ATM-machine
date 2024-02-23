@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #000080;
             padding: 20px;
         }
         .confirmation-box {
@@ -35,16 +35,18 @@
         <?php
         // Retrieve form data
         $name = $_POST['name'];
-        $city = $_POST['city'];
-        $mob = $_POST['mob'];
-        $Total balance = $_POST['balance'];
+     
+        $Balance = $_POST['balance'];
         ?>
    <p><strong>Name:</strong> ${user.name}</p>
-   <p><strong>City:</strong> ${user.city}</p>
-  <p><strong>Mobile Number:</strong> ${user.mob}</p>
-    <p><strong>Total balance:</strong> ${user.balance}</p>
+  
+ 
+        <p><strong>Your available Balance:</strong> ${user.balance}</p>
+         
+         
         
-        <p>Your account is created successfully. Now you can use the ATM to withdraw your money.</p>
+         
+       <h3><a href="/add">Add amount</a></h3>
         <h3><a href="create">Go to main menu</a></h3>
     </div>
 </body>

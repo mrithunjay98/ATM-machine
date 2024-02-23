@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #000080;
             padding: 20px;
         }
         .confirmation-box {
@@ -31,7 +31,7 @@
 </head>
 <body>
     <div class="confirmation-box">
-        <h2> Your trasnsaction is sucessfull  amount is added</h2>
+        <h2> Your trasnsaction is sucessfull  please collect cash</h2>
          
         <?php
         // Retrieve form data

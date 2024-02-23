@@ -69,14 +69,13 @@
 <body>
     <div class="container">
         <h2>Enter your pin number</h2>
-        <form action="ChangePin" method="post">
+        <form action="verifyPin/AddAmount" method="post">
             
             
-            <label for="atmPin">  current ATM Pin:</label>
-            <input type="password" id="atmPin" name="currentPin" pattern="[0-9]{4}" required>
-            
-            <label for="atmPin">  New ATM Pin:</label>
-            <input type="password" id="atmPin" name="newPin" pattern="[0-9]{4}" required>
+            <label for="atmPin">  ATM Pin:</label>
+            <input type="password" id="atmPin" name="atmPin" pattern="[0-9]{4}" required>
+              <label for="atmPin">  Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber"  required>
             
             <input type="submit" value="Submit">
             <h3><a href="create">Go to main menu</a></h3>

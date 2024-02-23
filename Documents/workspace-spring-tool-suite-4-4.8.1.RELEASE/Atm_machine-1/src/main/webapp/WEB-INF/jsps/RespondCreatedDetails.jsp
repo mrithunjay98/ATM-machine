@@ -11,7 +11,7 @@
             padding: 20px;
         }
         .confirmation-box {
-            background-color: #f0f0f0;
+            background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
@@ -31,23 +31,21 @@
 </head>
 <body>
     <div class="confirmation-box">
-        <h2> Your amount is added to your account</h2>
-         
+        <h2>User Details Confirmation</h2>
         <?php
         // Retrieve form data
         $name = $_POST['name'];
-     
-        $Balance = $_POST['balance'];
+        $city = $_POST['city'];
+        $mob = $_POST['mob'];
+        $Total balance = $_POST['balance'];
+$account number = $_POST['account number'];
         ?>
    <p><strong>Name:</strong> ${user.name}</p>
- <p><strong>  Added amount </strong>${amount}</p>
- 
-        <p><strong>Your available Balance:</strong> ${user.balance}</p>
-         
-         
-      
-         
-     
+   <p><strong>City:</strong> ${user.city}</p>
+  <p><strong>Mobile Number:</strong> ${user.mob}</p>
+    <p><strong>Total balance:</strong> ${user.balance}</p>
+        <p><strong>Account number:</strong> ${user.accountNumber}</p> 
+        <p>Your account is created successfully. Now you can use the ATM to withdraw your money.</p>
         <h3><a href="create">Go to main menu</a></h3>
     </div>
 </body>

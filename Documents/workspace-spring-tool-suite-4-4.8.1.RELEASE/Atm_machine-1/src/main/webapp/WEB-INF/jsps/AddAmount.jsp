@@ -15,7 +15,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #000080;
+            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
         
@@ -68,18 +68,18 @@
 </head>
 <body>
     <div class="container">
-        <h2>Enter your pin number</h2>
-        <form action="ChangePin" method="post">
+        <h2>Add amount to your  account</h2>
+        <form action="addAmount" method="post">
             
             
-            <label for="atmPin">  current ATM Pin:</label>
-            <input type="password" id="atmPin" name="currentPin" pattern="[0-9]{4}" required>
-            
-            <label for="atmPin">  New ATM Pin:</label>
-            <input type="password" id="atmPin" name="newPin" pattern="[0-9]{4}" required>
+            <label for="atmPin">  Amount:</label>
+            <input type="text" id="amount" name="amount"  required>
+            <label for="atmPin">  ATM Pin:</label>
+            <input type="password" id="atmPin" name="atmPin"  required>
             
             <input type="submit" value="Submit">
             <h3><a href="create">Go to main menu</a></h3>
+            
         </form>
     </div>
 </body>

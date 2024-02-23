@@ -15,6 +15,8 @@ public class CreateAccount {
 	private String mob;
 	private long atmPin;
 	private double balance;
+	private long accountNumber;
+	
 	public long getId() {
 		return id;
 	}
@@ -50,6 +52,12 @@ public class CreateAccount {
 	}
 	public void setBalance(double balance) {
 		this.balance = balance;
+	}
+	public long getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(long accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 	
 	

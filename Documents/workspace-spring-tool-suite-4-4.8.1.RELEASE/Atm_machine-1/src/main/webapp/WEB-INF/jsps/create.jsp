@@ -6,7 +6,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #2630E3 ;
+            background-color: #000080;
             font-family: Arial, sans-serif;
         }
         
@@ -54,15 +54,20 @@
             padding: 10px;
             border: none;
             border-radius: 4px;
-            background-color: #004884;
+            background-color: #000080;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
         
         input[type="submit"]:hover {
-            background-color: #00345a;
+            background-color: #000080;
         }
+        
+       
+        .link-style {
+    color: #0F52EB;
+}
     </style>
 </head>
 <body>
@@ -74,10 +79,10 @@
         
             
             
-      <h4><a href="enterPin">Withdraw money</a></h4>  
-      <h4><a href="changePIn">Change Atm pin</a></h4>
+      <h4><a href="enterPin" class="link-style">Withdraw money </a></h4>  
+      <h4><a href="changePIn"  class="link-style"> Change ATM pin</a></h4>
             
-             <h4><a href="addMoney">Add balance</a></h4>
+             <h4><a href="addMoney"  class="link-style"> Add Balance</a></h4>
         
         
         

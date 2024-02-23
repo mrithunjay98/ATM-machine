@@ -1,8 +1,11 @@
 package com.atmmachine.Controller;
 
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,7 +23,9 @@ public class AtmController {
 	
 @Autowired
 private AtmRepo repo;
-	
+
+
+
 	
 	@RequestMapping("/create")
 	public String createAccount() {
@@ -32,50 +37,82 @@ private AtmRepo repo;
 	
 	@RequestMapping("/save")
 	public String saveDetails(@ModelAttribute("save") CreateAccount account,ModelMap m) {
-		long atmPin = account.getAtmPin();
+		String mobile = account.getMob();
 		long id = account.getId();
-		System.out.print(atmPin);
-		CreateAccount findByatmPin = repo.findByatmPin(atmPin);
+		//input details
+				//long atmPin3 = findByatmPin.getAtmPin();
+				
+				
+				//long atmPin2 = account.getAtmPin();
+				String mob2 = account.getMob();
+				String name2 = account.getName();
+		CreateAccount findByatmPin = repo.findByMob(mobile);
 		
-		if(findByatmPin==null) {
-			CreateAccount save = repo.save(account);
-			m.addAttribute("user",save);
-			return"RespondAccountDetails";
-		}else {
+	
+		 if (findByatmPin ==null) {
+		        Random random = new Random();
+		        int randomNumber = 100000 + random.nextInt(900000);
+		        account.setAccountNumber(randomNumber);
+		        
+		        CreateAccount save = repo.save(account);
+		        m.addAttribute("user", save);
+		        return "RespondCreatedDetails";
+		    }
+		 
+		//database details
+		  String mob = findByatmPin.getMob();
+			String name = findByatmPin.getName();
+		 
+		  if (mob2.equals(mob) && name.equals(name2)) {
+		        return "alreadyAccount";
+		    } else {
+		        return null;
+		    }
+			 
 			
-		findByatmPin.setName(account.getName());
-		findByatmPin.setBalance(account.getBalance());
-		findByatmPin.setCity(account.getCity());
-		findByatmPin.setMob(account.getMob());
-		
-		CreateAccount save = repo.save(findByatmPin);
-		m.addAttribute("user",save);
-		return"RespondAccountDetails";
 		}
-	}
+		
+			
+		
+		
+
+
 	
 	
 	@RequestMapping("/enterPin")
 	public String authorise() {
 		
 		
-		return"verifypin";
+		return"verifypin_Withdraw";
 	}
 	
 	
-	@RequestMapping("/verifyPin")
+	@RequestMapping("/verifyPin/withdraw/Amount")
 	public String fetch(@ModelAttribute CreateAccount pin ,ModelMap map){
-		Long atmPin = pin.getAtmPin();
-		System.out.println(atmPin);
-		CreateAccount findByatmPin = repo.findByatmPin(atmPin);
-		map.addAttribute("user",findByatmPin);
+		long atmPin = pin.getAtmPin();
+		long accountNumber = pin.getAccountNumber();
+		
+		CreateAccount findByaccount = repo.findByAccountNumber(accountNumber);
+		
+		map.addAttribute("user",findByaccount);
 	    
-	    if(findByatmPin==null) {
+	    if(findByaccount==null) {
 	    	return"invalid_pin";
 	    	
 	    }
 	    
-		return"RespondAccountDetailsByPin";
+	    long accountNumber2 = findByaccount.getAccountNumber();
+	    long atmPin2 = findByaccount.getAtmPin();
+	    
+	    
+	    
+	    if(atmPin==atmPin2&&accountNumber==accountNumber2) {
+	    
+		return"Verified_WithdrawlAmount_response";
+		
+	    }
+		
+	    return "invalid_pin";
 
 	}
 	
@@ -86,6 +123,9 @@ private AtmRepo repo;
 		
 		return"change_Pin";
 	}
+	
+	
+	
 	
 	@RequestMapping("/ChangePin")
 	public String changePin(@RequestParam("currentPin") long currentPin,@RequestParam("newPin") long newPin  ,ModelMap map){
@@ -109,18 +149,27 @@ private AtmRepo repo;
 		return"RespondChangePin";
 
 	}
-	
-	
-	@RequestMapping("/withdraw")
-	public String withdraw(@RequestParam("atmPin") long Pin,@RequestParam("amount") long amount  ,ModelMap map){
+	@RequestMapping("/withdrawDetails")
+	public String withdraw() {
 		
 		
-		System.out.println("pin"+Pin);
+		return"withdraw";
+	}
+	
+	
+	@RequestMapping("/withdraw_Amount")
+	public String withdraw(@RequestParam("amount") long amount,@RequestParam("atmPin") long atmPin  ,ModelMap map){
+		
+		
+		System.out.println("pin___"+atmPin);
 		System.out.println(" amount "+amount);
-		CreateAccount findByatmPin = repo.findByatmPin(Pin);
+		
+		CreateAccount findByatmPin = repo.findByatmPin(atmPin);
 		map.addAttribute("user",findByatmPin);
 		
 		map.addAttribute("amount",amount);
+		
+		
 	    if(findByatmPin==null) {
 	    	
 	    	return"withdraw_invalidPin";
@@ -129,9 +178,16 @@ private AtmRepo repo;
 	    	double balance = findByatmPin.getBalance();
 	    	findByatmPin.setBalance(balance-amount);
 	    	
-	    	System.out.println(balance-amount);
+	    	
 	    	repo.save(findByatmPin);
+	    	
 	    }
+	    double balance = findByatmPin.getBalance();
+	    if(amount>balance) {
+	    	
+			return"Insufficient_funds";
+			
+		}
 		return"withdraw_response";
 		
 	}
@@ -141,11 +197,42 @@ private AtmRepo repo;
 	public String addAccount() {
 		
 		
-		return"AddAmount1";
+		return"verifypin_AddAmount";
+	}
+	
+	@RequestMapping("/add")
+	public String addAccoun() {
+		
+		
+		return"AddAmount";
 	}
 	
 	
 	
+	@RequestMapping("/verifyPin/AddAmount")
+	public String verify(@ModelAttribute CreateAccount pin ,ModelMap map){
+		long atmPin = pin.getAtmPin();
+		long accountNumber = pin.getAccountNumber();
+		
+		CreateAccount findByaccount = repo.findByAccountNumber(accountNumber);
+		
+		map.addAttribute("user",findByaccount);
+	    
+	    if(findByaccount==null) {
+	    	return"invalid_pin";
+	    	
+	    }
+	    
+	    long accountNumber2 = findByaccount.getAccountNumber();
+	    long atmPin2 = findByaccount.getAtmPin();
+	    
+	    if(atmPin==atmPin2&&accountNumber==accountNumber2) {
+	    
+		return"Verified_Addamount_response";}
+		
+	    return "invalid_pin2";
+
+	}
 	@RequestMapping("/addAmount")
 	public String addAmount(@RequestParam("atmPin") long Pin,@RequestParam("amount") long amount  ,ModelMap map){
 		
