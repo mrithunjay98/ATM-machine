@@ -69,7 +69,7 @@
 <body>
     <div class="container">
         <h2>Enter your pin number</h2>
-        <form action="verifyPin/withdraw/Amount" method="post">
+        <form action="checkBalance" method="post">
             
             
             <label for="atmPin">  ATM Pin:</label>

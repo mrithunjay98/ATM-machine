@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000080;
+            background-color: #0757DA;
             padding: 20px;
         }
         .confirmation-box {

@@ -63,7 +63,7 @@ private AtmRepo repo;
 		  String mob = findByatmPin.getMob();
 			String name = findByatmPin.getName();
 		 
-		  if (mob2.equals(mob) && name.equals(name2)) {
+		  if (mob2.equals(mob) && name.equals(name2)|| mob2.equals(mob)) {
 		        return "alreadyAccount";
 		    } else {
 		        return null;
@@ -257,4 +257,44 @@ private AtmRepo repo;
 		return"addamount_response";
 
 	}
+	
+	@RequestMapping("/checkBalanceLink")
+	public String checkBalance() {
+		
+		
+		return"check_balance";
+	}
+	
+	
+	@RequestMapping("/checkBalance")
+	public String checkBalance(@ModelAttribute CreateAccount pin ,ModelMap map){
+		long atmPin = pin.getAtmPin();
+		long accountNumber = pin.getAccountNumber();
+		
+		CreateAccount findByaccount = repo.findByAccountNumber(accountNumber);
+		
+		map.addAttribute("user",findByaccount);
+	    
+	    if(findByaccount==null) {
+	    	return"invalid_pin_checkBalance";
+	    	
+	    }
+	    
+	    long accountNumber2 = findByaccount.getAccountNumber();
+	    long atmPin2 = findByaccount.getAtmPin();
+	    
+	    
+	    
+	    if(atmPin==atmPin2&&accountNumber==accountNumber2) {
+	    
+		return"check_balance_response";
+		
+	    }
+		
+	    return "invalid_pin_checkBalance";
+
+	}
+	
+	
+	
 }

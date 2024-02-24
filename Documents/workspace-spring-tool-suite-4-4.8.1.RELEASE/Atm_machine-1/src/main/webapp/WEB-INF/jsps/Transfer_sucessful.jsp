@@ -11,7 +11,7 @@
             padding: 20px;
         }
         .confirmation-box {
-            background-color: #f0f0f0;
+            background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
@@ -31,8 +31,7 @@
 </head>
 <body>
     <div class="confirmation-box">
-        <h2> Your amount is added to your account</h2>
-         
+        <h2>Your transfer Sucessfull of ${ user.name}</h2>
         <?php
         // Retrieve form data
         $name = $_POST['name'];
@@ -40,14 +39,14 @@
         $Balance = $_POST['balance'];
         ?>
    <p><strong>Name:</strong> ${user.name}</p>
- <p><strong>  Added amount </strong>${amount}</p>
+  
  
         <p><strong>Your available Balance:</strong> ${user.balance}</p>
          
          
-      
+        
          
-     
+       
         <h3><a href="create">Go to main menu</a></h3>
     </div>
 </body>

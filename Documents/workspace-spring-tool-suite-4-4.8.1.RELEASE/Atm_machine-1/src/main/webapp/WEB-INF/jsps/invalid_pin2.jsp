@@ -15,7 +15,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #000080;
+            background-color: #0757DA;
             font-family: Arial, sans-serif;
         }
         

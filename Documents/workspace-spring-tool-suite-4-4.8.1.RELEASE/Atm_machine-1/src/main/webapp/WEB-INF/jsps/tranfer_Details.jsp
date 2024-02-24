@@ -68,17 +68,28 @@
 </head>
 <body>
     <div class="container">
-        <h2>Enter your pin number</h2>
-        <form action="verifyPin/withdraw/Amount" method="post">
+        <h2>Enter Transfer Details</h2>
+        <form action="transferUpdate" method="post">
+        
+             <label for="atmPin">  </label>
+            <input type="hidden" value="${user.accountNumber}" id="amount" name="accountSender" " required>
             
+             <label for="atmPin">  Receiver Account number:</label>
+            <input type="text" id="amount" name="accountReceiver" "required>
             
-            <label for="atmPin">  ATM Pin:</label>
-            <input type="password" id="atmPin" name="atmPin" pattern="[0-9]{4}" required>
-              <label for="atmPin">  Account Number:</label>
-            <input type="text" id="aaccountNumber" name="accountNumber"  required>
+             <label for="atmPin">  Receiver Account name:</label>
+            <input type="text" id="amount" name="name" " required>
+            
+            <label for="atmPin">  Amount:</label>
+            <input type="text" id="amount" name="amount" " required>
+            
+            <label for="atmPin">  </label>
+            <input type="hidden" id="atmPin"  value="${user.atmPin}"name="atmPin" pattern="[0-9]{4}" required>
             
             <input type="submit" value="Submit">
             <h3><a href="create">Go to main menu</a></h3>
+            
+            
         </form>
     </div>
 </body>

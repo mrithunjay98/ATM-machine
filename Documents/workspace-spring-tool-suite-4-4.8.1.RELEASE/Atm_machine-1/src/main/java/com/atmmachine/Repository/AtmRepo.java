@@ -9,5 +9,6 @@ public interface AtmRepo extends JpaRepository<CreateAccount,Long> {
 	CreateAccount findByMob(String mob);
 	CreateAccount findByatmPin(long pin);
 	CreateAccount findByAccountNumber(long accountNumber);
+	CreateAccount findByAccountNumberAndAtmPin(long accountSender, long atmPin);
 
 }

@@ -6,7 +6,7 @@
     <title>User Details Form</title>
     <style>
         body {
-            background-color: #000080;
+            background-color: #0757DA ;
             font-family: Arial, sans-serif;
         }
         
@@ -14,22 +14,22 @@
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #fff ;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         
         h2 {
             text-align: center;
-            color: #0E16A5 ;
+            color: #0C0CCB ;
         }
           h3 {
             text-align: center;
-            color: #0E16A5 ;
+            color: #0C0CCB ;
         }
          h4 {
             text-align: center;
-            color: #0E16A5 ;
+            color: #0C0CCB ;
         }
         
         label {
@@ -55,18 +55,19 @@
             border: none;
             border-radius: 4px;
             background-color: #000080;
-            color: #fff;
+            color: #FFFFFF;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
         
         input[type="submit"]:hover {
-            background-color: #000080;
+            background-color: #1F1EF5;
+            color: #FFFFFF;
         }
         
        
         .link-style {
-    color: #0F52EB;
+    color: #0606AF;
 }
     </style>
 </head>
@@ -82,9 +83,10 @@
       <h4><a href="enterPin" class="link-style">Withdraw money </a></h4>  
       <h4><a href="changePIn"  class="link-style"> Change ATM pin</a></h4>
             
-             <h4><a href="addMoney"  class="link-style"> Add Balance</a></h4>
+             <h4><a href="addMoney"  class="link-style"> Add Balance </a></h4>
         
-        
+        <h4><a href="checkBalanceLink" class="link-style"> Check Balance </a></h4>
+        <h4><a href="fundTransferJsp" class="link-style"> Fund Transfer </a></h4>
         
         
        <h2> DONT HAVE ACCOUNT</h2>
